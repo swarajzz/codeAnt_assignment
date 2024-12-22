@@ -1,6 +1,6 @@
 import { MoveUp } from "lucide-react";
 import Image from "next/image";
-import AuthForm from "../_components/authForm";
+import AuthForm from "@/app/_components/authForm";
 
 export default function Login() {
   const statistics = [

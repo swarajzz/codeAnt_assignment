@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import fullLogo from "@/public/fullLogo.svg";
-import { Button } from "./ui/button";
+import { Button } from "@/app/_components/ui/button";
 import { sidebarFooterItems, sidebarItems } from "@/public/data";
 import Image from "next/image";
 import { cloneElement, useState } from "react";
