@@ -15,10 +15,10 @@ export default function AuthForm() {
   ];
 
   return (
-    <section className="bg-[#FAFAFA] w-full md:w-1/2 flex items-center justify-center">
+    <section className="bg-primary-dark-white w-full lg:w-1/2 flex items-center justify-center">
       <div className="w-full max-w-2xl mx-6 my-2 md:my-4 flex flex-col gap-5">
-        <div className="bg-white flex flex-col  border-[#D5D7DA] border-2 rounded-xl">
-          <div className="flex flex-col items-center gap-8 px-3 md:px-5 py-6 md:py-9 border-b-2 border-[#D5D7DA]">
+        <div className="bg-white flex flex-col border-[#D5D7DA] border rounded-xl overflow-hidden">
+          <div className="flex flex-col items-center gap-8 px-3 md:px-5 py-6 md:py-9 border-b border-[#D5D7DA]">
             <Image
               src="/fullLogo.svg"
               alt="Codeant logo"
@@ -26,7 +26,7 @@ export default function AuthForm() {
               height={40}
             />
 
-            <h1 className="text-2xl font-semibold lg:text-3xl">
+            <h1 className="text-2xl font-semibold lg:text-3xl text-primary-300">
               Welcome to CodeAnt AI
             </h1>
 
@@ -38,7 +38,7 @@ export default function AuthForm() {
                   className={`w-full px-4 py-3 rounded-lg font-medium text-xl ${
                     selectedOption === option.value
                       ? "bg-accent-200 text-white"
-                      : "hover:bg-gray-100 bg-[#FAFAFA]"
+                      : "hover:bg-gray-100 bg-primary-dark-white text-primary-100"
                   }`}
                 >
                   {option.label}
@@ -67,7 +67,7 @@ export default function AuthForm() {
           </Link>
         </div>
 
-        <p className="text-center">
+        <p className="text-center text-300 text-base">
           By signing up you agree to the <strong>Privacy Policy</strong>
         </p>
       </div>
