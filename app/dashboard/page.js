@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { RefreshCw, Plus, Search, Database } from "lucide-react";
-import { Button } from "../_components/ui/button";
-import { Input } from "../_components/ui/input";
-import Sidebar from "../_components/sidebar";
+import { Button } from "@/app/_components/ui/button";
+import { Input } from "@/app/_components/ui/input";
+import Sidebar from "@/app/_components/sidebar";
 import { repositories } from "@/public/data";
-import Hamburger from "../_components/hamburger";
+import Hamburger from "@/app/_components/hamburger";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@/app/_components/ui/button";
 import { AlignJustify, X } from "lucide-react";
 import fullLogo from "@/public/fullLogo.svg";
 import { sidebarItems, sidebarFooterItems } from "@/public/data";

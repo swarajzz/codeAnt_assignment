@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { cloneElement, useState } from "react";
-import { Button } from "./ui/button";
+import { Button } from "@/app/_components/ui/button";
 import { buttonData } from "@/public/data";
 import Link from "next/link";
 
