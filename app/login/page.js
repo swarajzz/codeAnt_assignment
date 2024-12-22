@@ -1,6 +1,6 @@
 import { MoveUp } from "lucide-react";
 import Image from "next/image";
-import AuthForm from "@/app/_components/authform";
+import Auth from "@/app/_components/auth";
 
 export default function Login() {
   const statistics = [
@@ -81,7 +81,7 @@ export default function Login() {
         </div>
       </section>
 
-      <AuthForm />
+      <Auth />
     </div>
   );
 }

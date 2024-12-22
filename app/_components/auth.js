@@ -6,7 +6,7 @@ import { Button } from "@/app/_components/ui/button";
 import { buttonData } from "@/public/data";
 import Link from "next/link";
 
-export default function AuthForm() {
+export default function Auth() {
   const [selectedOption, setSelectedOption] = useState("saas");
 
   const options = [
