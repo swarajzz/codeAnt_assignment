@@ -14,7 +14,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="hidden md:flex w-full bg-white flex-col h-screen border-r bg-background max-w-[242px] top-0">
+    <div className="hidden md:flex w-full bg-white flex-col h-screen border-r border-borderColors-1 bg-background max-w-[242px] top-0">
       <div className="p-5">
         <div className="flex items-center gap-2 mb-6">
           <Image
@@ -27,7 +27,7 @@ export default function Sidebar() {
         </div>
         <select
           defaultValue="default"
-          className="w-full text-base px-3 py-2 bg-background border border-[#D5D7DA] rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+          className="w-full text-base px-3 py-2 bg-background border border-borderColors-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
         >
           <option value="default">Swaraj</option>
           <option value="org1">Organization 1</option>
@@ -47,7 +47,7 @@ export default function Sidebar() {
                 <Button
                   intent={activeButton === item.route ? "" : "ghost"}
                   size={"md"}
-                  className="w-full flex justify-start gap-2"
+                  className="w-full flex justify-start gap-2 font-semibold"
                   onClick={() => handleButtonClick(item.route)}
                 >
                   {cloneElement(item.icon, {
@@ -62,7 +62,7 @@ export default function Sidebar() {
         </div>
       </nav>
 
-      <div className="p-4 mt-auto border-t">
+      <div className="p-4 mt-auto">
         <div className="flex flex-col">
           {sidebarFooterItems.map((item, index) => {
             return (

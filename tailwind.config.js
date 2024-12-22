@@ -15,6 +15,7 @@ module.exports = {
           300: "#181D27",
           400: "#081735",
           "dark-white": "#FAFAFA",
+          "darker-white": "#F5F5F5",
         },
         accent: {
           100: "#0049C6",

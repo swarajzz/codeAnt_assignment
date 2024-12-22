@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -28,13 +28,17 @@ export default function Hamburger({ isOpen, toggleMenu }) {
             />
           </div>
           <div className="cursor-pointer" onClick={toggleMenu}>
-            {isOpen ? <X /> : <AlignJustify />}
+            {isOpen ? (
+              <X width={24} height={24} />
+            ) : (
+              <AlignJustify width={24} height={24} />
+            )}
           </div>
         </div>
       </div>
 
       <div
-        className={`md:hidden absolute border border-[##E9EAEB] left-0 right-0 bg-white z-40 overflow-hidden transition-all duration-300 ease-in-out top-16`}
+        className={`md:hidden absolute border border-borderColors-1 left-0 right-0 bg-white z-40 overflow-hidden transition-all duration-300 ease-in-out top-16`}
         style={{
           opacity: isOpen ? 1 : 0,
           visibility: isOpen ? "visible" : "hidden",
@@ -43,7 +47,7 @@ export default function Hamburger({ isOpen, toggleMenu }) {
         <div className="p-4 overflow-y-auto">
           <select
             defaultValue="default"
-            className="w-full text-base px-3 py-2 bg-background border border-[#D5D7DA] rounded-md focus:outline-none focus:ring-2 focus:ring-ring mb-4"
+            className="w-full text-base px-3 py-2 bg-background border border-borderColors-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring mb-4"
           >
             <option value="default">Swaraj</option>
             <option value="org1">Organization 1</option>

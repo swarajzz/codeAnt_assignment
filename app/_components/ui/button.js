@@ -17,10 +17,11 @@ const button = cva(
         ],
         outline: [
           "border",
-          "border-[#D8DAE5]",
+          "border-borderColors-4",
           "text-primary-200",
           "hover:bg-gray-50",
           "hover:text-accent-foreground",
+          "semi-bold",
         ],
         ghost: [
           "text-primary-100",

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { RefreshCw, Plus, Search, Database } from "lucide-react";
 import { Button } from "../_components/ui/button";
@@ -18,9 +20,9 @@ export default function Dashboard() {
     setIsOpen(!isOpen);
   };
   return (
-    <main className="flex h-screen bg-[#FAFAFA]">
+    <main className="flex h-screen bg-primary-dark-white">
       <Sidebar />
-      <section className="flex-1 m-6 overflow-auto scrollbar-none">
+      <section className="flex-1 sm:m-6 overflow-auto scrollbar-none">
         <Hamburger
           isOpen={isOpen}
           setIsOpen={setIsOpen}
@@ -32,8 +34,8 @@ export default function Dashboard() {
             onClick={toggleMenu}
           />
         )}
-        <div className=" border overflow-hidden rounded-xl border-[#E9EAEB] bg-white">
-          <div className="p-6 pt-16 md:p-6 rounded-t-xl border-b border-[#E9EAEB]">
+        <div className=" border overflow-hidden rounded-xl border-borderColors-1 bg-white">
+          <div className="p-6 pt-20 sm:pt-16 md:pt-6 md:p-6 rounded-t-xl border-b border-borderColors-1">
             <div className="flex items-start flex-col lg:flex-row lg:items-center gap-2 justify-between mb-4">
               <div className="flex flex-col gap-1">
                 <h1 className="text-2xl text-primary-300 font-semibold">
@@ -75,24 +77,26 @@ export default function Dashboard() {
             {filteredRepositories.map((repo, index) => (
               <div
                 key={repo.name}
-                className={`p-4 ${
-                  index !== 0 && "border-t border-[#D5D7DA]"
+                className={`p-4 md:p-6 ${
+                  index !== 0 && "border-t border-borderColors-2"
+                } ${
+                  index === 2 && "bg-primary-darker-white"
                 } hover:bg-accent/50 transition-colors`}
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex flex-col gap-2 sm:gap-4">
+                  <div className="flex flex-col gap-2 md:gap-3">
                     <div className="flex items-center gap-2">
                       <h2 className="font-medium text-lg sm:text-xl">
                         {repo.name}
                       </h2>
-                      <span className="text-[14px] text-[#175CD3] border bg-[#EFF8FF] border-[#B2DDFF] rounded-full px-2 py-0.5">
+                      <span className="text-sm border bg-[#EFF8FF] border-[#B2DDFF] rounded-full px-2 py-0.5 text-accent-300">
                         {!repo.isPublic ? "Private" : "Public"}
                       </span>
                     </div>
-                    <div className="flex gap-5 text-sm sm:text-base">
+                    <div className="flex gap-5 text-sm sm:text-base justify-between">
                       <span className="flex items-center">
                         <p className="">{repo.language}</p>
-                        <span className="ml-2 h-2 w-2 inline-flex rounded-full bg-[#1570EF]"></span>
+                        <span className="ml-2 h-2 w-2 inline-flex rounded-full bg-accent-200"></span>
                       </span>
                       <span className="flex items-center gap-1">
                         <Database width={10.5} height={12} /> {repo.size}
