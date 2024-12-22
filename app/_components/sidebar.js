@@ -14,7 +14,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="flex w-full bg-white flex-col h-screen border-r bg-background max-w-[242px] top-0">
+    <div className="hidden md:flex w-full bg-white flex-col h-screen border-r bg-background max-w-[242px] top-0">
       <div className="p-5">
         <div className="flex items-center gap-2 mb-6">
           <Image src={fullLogo} unoptimized alt="CodeAnt AI Logo" width={161} height={32} />
