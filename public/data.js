@@ -1,4 +1,13 @@
-import { KeyRound } from "lucide-react";
+import {
+  BookText,
+  Cloud,
+  Code,
+  Headphones,
+  House,
+  KeyRound,
+  LogOut,
+  Settings,
+} from "lucide-react";
 
 export const buttonData = {
   saas: [
@@ -12,7 +21,6 @@ export const buttonData = {
           />
         </svg>
       ),
-      onClick: () => console.log("GitHub sign in"),
     },
     {
       label: "Sign in with Bitbucket",
@@ -42,7 +50,6 @@ export const buttonData = {
           />
         </svg>
       ),
-      onClick: () => console.log("Bitbucket sign in"),
     },
     {
       label: "Sign in with Azure DevOps",
@@ -71,7 +78,6 @@ export const buttonData = {
           />
         </svg>
       ),
-      onClick: () => console.log("Azure DevOps sign in"),
     },
     {
       label: "Sign in with GitLab",
@@ -95,7 +101,6 @@ export const buttonData = {
           />
         </svg>
       ),
-      onClick: () => console.log("GitLab sign in"),
     },
   ],
   self_hosted: [
@@ -121,12 +126,103 @@ export const buttonData = {
           />
         </svg>
       ),
-      onClick: () => console.log("Custom SaaS sign in"),
     },
     {
       label: "Sign in with SSO",
       icon: <KeyRound />,
-      onClick: () => console.log("Self-hosted GitHub sign in"),
     },
   ],
 };
+
+export const repositories = [
+  {
+    name: "design-system",
+    isPublic: true,
+    language: "React",
+    size: "7320 KB",
+    updatedAt: "1 day ago",
+  },
+  {
+    name: "codeant-ci-app",
+    isPublic: false,
+    language: "Javascript",
+    size: "5871 KB",
+    updatedAt: "2 days ago",
+  },
+  {
+    name: "analytics-dashboard",
+    isPublic: false,
+    language: "Python",
+    size: "4521 KB",
+    updatedAt: "5 days ago",
+  },
+  {
+    name: "mobile-app",
+    isPublic: true,
+    language: "Swift",
+    size: "3096 KB",
+    updatedAt: "3 days ago",
+  },
+  {
+    name: "e-commerce-platform",
+    isPublic: false,
+    language: "Java",
+    size: "6210 KB",
+    updatedAt: "6 days ago",
+  },
+  {
+    name: "blog-website",
+    isPublic: true,
+    language: "HTML/CSS",
+    size: "1876 KB",
+    updatedAt: "4 days ago",
+  },
+  {
+    name: "social-network",
+    isPublic: false,
+    language: "PHP",
+    size: "5432 KB",
+    updatedAt: "7 days ago",
+  },
+];
+
+export const sidebarItems = [
+  {
+    label: "Repositories",
+    icon: <House />,
+    route: "/repositories",
+  },
+  {
+    label: "AI Code Review",
+    icon: <Code />,
+    route: "/code-review",
+  },
+  {
+    label: "Cloud Security",
+    icon: <Cloud />,
+    route: "/security",
+  },
+  {
+    label: "How to Use",
+    icon: <BookText />,
+    route: "/how-to-use",
+  },
+  {
+    label: "Settings",
+    icon: <Settings />,
+    route: "/settings",
+  },
+];
+
+export const sidebarFooterItems = [
+  {
+    label: "Support",
+    icon: <Headphones />,
+    route: "/support",
+  },
+  {
+    label: "Logout",
+    icon: <LogOut />,
+    route: "/logout",
+  },
+];
