@@ -27,7 +27,7 @@ export default function Hamburger({ isOpen, toggleMenu }) {
               height={32}
             />
           </div>
-          <div className="cursor-pointer" onClick={toggleMenu}>
+          <div className="cursor-pointer block sm:hidden" onClick={toggleMenu}>
             {isOpen ? (
               <X width={24} height={24} />
             ) : (
