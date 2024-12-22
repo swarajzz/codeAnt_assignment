@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { buttonData } from "@/public/data";
 
 export default function AuthForm() {
@@ -53,7 +53,7 @@ export default function AuthForm() {
                 intent="outline"
                 className="w-full max-w-[446px] flex gap-2 items-center justify-center"
               >
-                <div className="w-[25px]">{button.icon}</div>
+                <span className="w-[25px]">{button.icon}</span>
                 <span>{button.label}</span>
               </Button>
             ))}

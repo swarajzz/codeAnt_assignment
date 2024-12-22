@@ -1,9 +1,10 @@
 import React from "react";
 import { cva } from "class-variance-authority";
+import { cn } from "@/app/_lib/utils";
 
 const button = cva(
   [
-    "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   ],
   {
     variants: {
@@ -18,19 +19,24 @@ const button = cva(
           "border",
           "border-[#D8DAE5]",
           "text-primary-200",
-          "hover:bg-accent",
+          "hover:bg-gray-50",
           "hover:text-accent-foreground",
         ],
-        destructive: [
-          "bg-accent-400",
-          "text-primary-200",
-          "border-gray-400",
-          "hover:bg-accent-300",
+        ghost: [
+          "text-primary-100",
+          "hover:bg-gray-100",
+          "hover:text-primary-200",
+        ],
+        "danger-ghost": [
+          "text-red-600",
+          "hover:bg-red-50/50",
+          "hover:text-red-700",
+          "focus:ring-red-500",
         ],
       },
       size: {
         sm: ["text-sm", "py-1", "min-h-9", "px-3"],
-        md: ["text-xs", "py-4", "min-h-9", "px-10"],
+        md: ["text-base", "py-2", "min-h-9", "px-3"],
         lg: ["text-md", "py-2", "px-4", "min-h-14", "px-5", "font-semibold"],
       },
     },
@@ -43,5 +49,5 @@ const button = cva(
 );
 
 export const Button = ({ className, intent, size, ...props }) => (
-  <button className={button({ intent, size, className })} {...props} />
+  <button className={cn(button({ intent, size, className }))} {...props} />
 );
