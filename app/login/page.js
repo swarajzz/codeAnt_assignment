@@ -1,6 +1,6 @@
 import { MoveUp } from "lucide-react";
 import Image from "next/image";
-import LoginForm from "../_components/LoginForm";
+import AuthForm from "../_components/authForm";
 
 export default function Login() {
   const statistics = [
@@ -20,10 +20,10 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex w-full">
-      <section className="bg-white flex items-center justify-center w-1/2 border border-[#E9EAEB]">
-        <div>
+      <section className="hidden bg-white md:flex items-center justify-center w-1/2 border border-[#E9EAEB]">
+        <div className="z-10 max-w-[474px] mx-4">
           <div className="bg-white shadow flex flex-col py-3 rounded-2xl w-full max-w-[447px]">
-            <div className="flex px-6 py-4 gap-2 items-center border-b-2">
+            <div className="flex px-4 lg:px-6 py-4 gap-2 items-center border-b-2">
               <Image
                 src="/codeant-dark.svg"
                 alt="Codeant logo"
@@ -32,7 +32,7 @@ export default function Login() {
               />
               <h1 className="text-lg font-bold">AI to Detect & Autofix Code</h1>
             </div>
-            <div className="flex justify-between px-6 py-4 gap-5">
+            <div className="flex justify-between px-4 lg:px-6 py-4 gap-5">
               {statistics.map((stat, index) => {
                 return (
                   <div key={index} className="flex flex-col items-center">
@@ -43,7 +43,7 @@ export default function Login() {
               })}
             </div>
           </div>
-          <div className="flex bg-white shadow max-w-[265px] flex-col justify-between px-6 py-4 gap-5 rounded-2xl translate-x-2/3 -translate-y-3">
+          <div className="flex bg-white shadow max-w-[265px] flex-col justify-between px-5 lg:px-7 py-4 gap-5 rounded-2xl translate-x-2/3 -translate-y-3">
             <div className="flex justify-between">
               <div>
                 <Image
@@ -67,7 +67,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="absolute left-0 bottom-0">
+        <div className="absolute left-0 bottom-0 max-w-64">
           <Image
             src="/codeant.svg"
             alt="Codeant logo"
@@ -77,7 +77,7 @@ export default function Login() {
         </div>
       </section>
 
-      <LoginForm />
+      <AuthForm />
     </div>
   );
 }
