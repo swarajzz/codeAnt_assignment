@@ -1,8 +1,10 @@
 "use client";
+
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { cloneElement, useState } from "react";
 import { Button } from "./ui/button";
 import { buttonData } from "@/public/data";
+import Link from "next/link";
 
 export default function AuthForm() {
   const [selectedOption, setSelectedOption] = useState("saas");
@@ -45,7 +47,10 @@ export default function AuthForm() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3 md:gap-5 py-6 px-8">
+          <Link
+            href="/dashboard"
+            className="flex flex-col items-center gap-3 md:gap-5 py-6 px-8"
+          >
             {buttonData[selectedOption]?.map((button, index) => (
               <Button
                 key={index}
@@ -53,11 +58,13 @@ export default function AuthForm() {
                 intent="outline"
                 className="w-full max-w-[446px] flex gap-2 items-center justify-center"
               >
-                <span className="w-[25px]">{button.icon}</span>
+                {cloneElement(button.icon, {
+                  className: "h-6 w-6",
+                })}
                 <span>{button.label}</span>
               </Button>
             ))}
-          </div>
+          </Link>
         </div>
 
         <p className="text-center">

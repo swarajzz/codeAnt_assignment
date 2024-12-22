@@ -17,7 +17,13 @@ export default function Sidebar() {
     <div className="hidden md:flex w-full bg-white flex-col h-screen border-r bg-background max-w-[242px] top-0">
       <div className="p-5">
         <div className="flex items-center gap-2 mb-6">
-          <Image src={fullLogo} unoptimized alt="CodeAnt AI Logo" width={161} height={32} />
+          <Image
+            src={fullLogo}
+            unoptimized
+            alt="CodeAnt AI Logo"
+            width={161}
+            height={32}
+          />
         </div>
         <select
           defaultValue="default"
@@ -33,7 +39,11 @@ export default function Sidebar() {
         <div className="flex flex-col gap-1.5">
           {sidebarItems.map((item) => {
             return (
-              <Link className="flex text-lg" key={item.route} href="#">
+              <Link
+                className="flex text-lg"
+                key={item.route}
+                href={item.label === "Logout" ? "/login" : "#"}
+              >
                 <Button
                   intent={activeButton === item.route ? "" : "ghost"}
                   size={"md"}
@@ -56,7 +66,11 @@ export default function Sidebar() {
         <div className="flex flex-col">
           {sidebarFooterItems.map((item, index) => {
             return (
-              <Link className="flex text-lg" key={item.route} href="#">
+              <Link
+                className="flex text-lg"
+                key={item.route}
+                href={item.label === "Logout" ? "/login" : "#"}
+              >
                 <Button
                   intent={
                     item.route === "/logout"
