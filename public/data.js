@@ -226,3 +226,8 @@ export const sidebarFooterItems = [
     route: "/logout",
   },
 ];
+
+export const options = [
+  { label: "SAAS", value: "saas" },
+  { label: "Self Hosted", value: "self_hosted" },
+];
